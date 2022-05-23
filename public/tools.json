@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Hammer",
+        "price": 100,
+        "moq": 100,
+        "quantity": 100,
+        "description": "A good quality hammer with soft grip and steel head",
+        "img": "https://i.ibb.co/ZXnvjRg/hammer.png"
+    },
+    {
+        "name": "Chain Saw",
+        "price": 500,
+        "moq": 20,
+        "quantity": 50,
+        "description": "It have 5 years warrenty service with 2 years of replacement of chain",
+        "img": "https://i.ibb.co/xf4j6Xt/chain-saw.png"
+    },
+    {
+        "name": "Saw",
+        "price": 100,
+        "moq": 50,
+        "quantity": 70,
+        "description": "Steel saw with extreme cutting availity with soft grip ",
+        "img": "https://i.ibb.co/Nsg0YBK/saw.png"
+    },
+    {
+        "name": "Nail",
+        "price": 5,
+        "moq": 500,
+        "quantity": 10000,
+        "description": "Good quality steel nail not so easily bend out at any condition",
+        "img": "https://i.ibb.co/mtRG7G1/steel-nail.png"
+    },
+    {
+        "name": "Drill Machine",
+        "price": 200,
+        "moq": 20,
+        "quantity": 100,
+        "description": "Drill Machine with extreme drilling power and avail to drill at any condition",
+        "img": "https://i.ibb.co/gTYgzq9/drill-machine.png"
+    },
+    {
+        "name": "Screew Drive",
+        "price": 20,
+        "moq": 100,
+        "quantity": 500,
+        "description": "Steel screew driver avial to handle any size of screew",
+        "img": "https://i.ibb.co/r0Dk2GT/screew-driver.png"
+    },
+    {
+        "name": "Heat Gun",
+        "price": 250,
+        "moq": 40,
+        "quantity": 500,
+        "description": "This gun has 2 years of warrenty and it can produce heat up to 100 degree",
+        "img": "https://i.ibb.co/Dr0G4CK/heat-gun.png"
+    },
+    {
+        "name": "Steel Cutter",
+        "price": 400,
+        "moq": 80,
+        "quantity": 300,
+        "description": "It can cut down any kind of steel sheet and metals it can use at any condition",
+        "img": "https://i.ibb.co/WkQrS7Q/steel-cutter.png"
+    },
+    {
+        "name": "Air Blow Gun",
+        "price": 35,
+        "moq": 100,
+        "quantity": 500,
+        "description": "Its motor can produce good and powerfull air for do work at any condition",
+        "img": "https://i.ibb.co/SmC7xwK/air-blow-gun.png"
+    },
+    {
+        "name": "Nail Gun",
+        "price": 300,
+        "moq": 60,
+        "quantity": 200,
+        "description": "Powerfull nail gun and it can nail down any wooden material or cement matarial",
+        "img": "https://i.ibb.co/hMH17nM/nail-gun.png"
+    }
+]
