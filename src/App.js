@@ -14,6 +14,7 @@ import Purchase from './Components/Purchase/Purchase';
 import Footer from './Components/Shared/Footer';
 import Navbar from './Components/Shared/Navbar';
 import AddReview from './Hooks/Dashboard/AddReview';
+import AllUsers from './Hooks/Dashboard/AllUsers';
 import Dashboard from './Hooks/Dashboard/Dashboard';
 import MyOreders from './Hooks/Dashboard/MyOreders';
 
@@ -30,6 +31,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />}>
           <Route index element={<MyOreders></MyOreders>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
+          <Route path='allusers' element={<AllUsers></AllUsers>}></Route>
         </Route>
         <Route path='/purchase/:toolID' element={<RequiredAuth><Purchase></Purchase></RequiredAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
