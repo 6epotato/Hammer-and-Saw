@@ -5,6 +5,7 @@ import auth from '../../firebase.init';
 import login from '../../Assets/Authentication/Login.jpg'
 import Loading from '../Shared/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useToken from '../../Hooks/useToken';
 
 const Login = () => {
     const [signInWithGoogle, Guser, Gloading, Gerror] = useSignInWithGoogle(auth);
@@ -22,8 +23,9 @@ const Login = () => {
 
     const navigate = useNavigate();
 
+    const [token] = useToken(user || Guser)
 
-    if (user || Guser) {
+    if (token) {
         navigate(from, { replace: true });
     }
 

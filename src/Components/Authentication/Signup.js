@@ -1,14 +1,16 @@
 import React from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import signup from '../../Assets/Authentication/signup.jpg'
 import auth from '../../firebase.init';
+import useToken from '../../Hooks/useToken';
 import Loading from '../Shared/Loading';
 
 const Signup = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [signInWithGoogle, Guser, Gloading, Gerror] = useSignInWithGoogle(auth);
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const [
         createUserWithEmailAndPassword,
@@ -17,12 +19,14 @@ const Signup = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
+    const [token] = useToken(user || Guser);
+
     const navigate = useNavigate();
     let location = useLocation();
 
     let from = location.state?.from?.pathname || "/";
 
-    if (user || Guser) {
+    if (token) {
         navigate(from, { replace: true });
     }
 
@@ -33,14 +37,14 @@ const Signup = () => {
 
     let signInError;
 
-    if (error || Gerror) {
-        signInError = <p className='text-red-500'>{error?.message || Gerror?.message}</p>
+    if (error || Gerror || updateError) {
+        signInError = <p className='text-red-500'>{error?.message || Gerror?.message || updateError?.message}</p>
     }
 
-    const onSubmit = data => {
-        createUserWithEmailAndPassword(data.email, data.password);
-        // await updateProfile({ displayName: data.name });
-        console.log(data.name);
+    const onSubmit = async data => {
+        await createUserWithEmailAndPassword(data.email, data.password);
+        await updateProfile({ displayName: data.name });
+        // console.log(data.name);
 
     };
     return (
