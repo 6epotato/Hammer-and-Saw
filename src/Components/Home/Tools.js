@@ -1,18 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import useTools from '../../Hooks/useTools';
+import Purchase from '../Purchase/Purchase';
 import Tool from './Tool';
 
 const Tools = () => {
     const [tools, setTools] = useTools([])
+    const [purchase, setPurchase] = useState(null)
     const slicedTools = tools.slice(0, 6);
     return (
-        <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-4'>
-            {
-                slicedTools.map(tool => <Tool
-                    key={tool.id}
-                    tool={tool}
-                ></Tool>)
-            }
+        <div>
+            <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-4'>
+                {
+                    slicedTools.map(tool => <Tool
+                        key={tool._id}
+                        tool={tool}
+                        setPurchase={setPurchase}
+                    ></Tool>)
+                }
+            </div>
+            {/* {
+                <Purchase purchase={purchase}></Purchase>
+            } */}
         </div>
     );
 };
