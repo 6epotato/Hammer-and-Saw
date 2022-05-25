@@ -3,10 +3,12 @@ import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import DeleteConfirmModal from './DeleteConfirmModal';
 
 const MyOreders = () => {
 
     const [orders, setOrders] = useState([]);
+    const [deletingItem, setDeletingItem] = useState(null)
     const [user] = useAuthState(auth);
     const navigate = useNavigate()
 
@@ -32,6 +34,7 @@ const MyOreders = () => {
                 .then(data => setOrders(data))
         }
     }, [user])
+
 
     return (
         <div>
@@ -60,7 +63,14 @@ const MyOreders = () => {
                                 <td>{o.phone}</td>
                                 <td>{o.customerName}</td>
                                 <td>
-                                    {(o.price && !o.paid) && <Link to={`/dashboard/payment/${o._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
+                                    {(o.price && !o.paid) && <div className='flex'>
+                                        <Link to={`/dashboard/payment/${o._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>
+                                        <div className='ml-2'>
+                                            <label onClick={() => setDeletingItem(o)} for="my-modal" class="btn btn-xs">Cancel Order</label>
+
+                                        </div>
+                                    </div>
+                                    }
                                     {(o.price && o.paid) && <div>
                                         <p><span className='text-success'>Paid</span></p>
                                     </div>}
@@ -72,6 +82,14 @@ const MyOreders = () => {
                     </tbody>
                 </table>
             </div>
+            {
+                deletingItem && <DeleteConfirmModal
+                    deletingItem={deletingItem}
+                    orders={orders}
+                    setOrders={setOrders}
+                    setDeletingItem={setDeletingItem}
+                ></DeleteConfirmModal>
+            }
 
         </div>
     );
