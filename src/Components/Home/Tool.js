@@ -11,7 +11,7 @@ const Tool = ({ tool, setPurchase }) => {
         <div>
             <div class="card w-96 bg-base-100 shadow-xl">
                 <figure class="px-10 pt-10">
-                    <img src={img} alt="Shoes" class="rounded-xl" />
+                    <img style={{ width: "200px" }} src={img} alt="Shoes" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
                     <h2 class="card-title">{name}</h2>

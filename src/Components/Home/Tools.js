@@ -6,12 +6,14 @@ import Tool from './Tool';
 const Tools = () => {
     const [tools, setTools] = useTools([])
     const [purchase, setPurchase] = useState(null)
-    const slicedTools = tools.slice(0, 6);
+    const reversed = tools.slice(0).reverse();
+
+    // const slicedTools = reverse.slice(0, 6);
     return (
         <div>
             <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-4'>
                 {
-                    slicedTools.map(tool => <Tool
+                    reversed.slice(0, 6).map(tool => <Tool
                         key={tool._id}
                         tool={tool}
                         setPurchase={setPurchase}
