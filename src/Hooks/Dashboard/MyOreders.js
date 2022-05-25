@@ -45,7 +45,7 @@ const MyOreders = () => {
                             <th>Product Name</th>
                             <th>Quantiy</th>
                             <th>Email</th>
-                            <th>Email</th>
+                            <th>Phone</th>
                             <th>Customer Name</th>
                         </tr>
                     </thead>

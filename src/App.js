@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Login from './Components/Authentication/Login';
+import RequireAdmin from './Components/Authentication/RequireAdmin';
 import RequiredAuth from './Components/Authentication/RequireAuth';
 import Signup from './Components/Authentication/Signup';
 import Blogs from './Components/Blog/Blogs';
@@ -31,7 +32,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />}>
           <Route index element={<MyOreders></MyOreders>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
-          <Route path='allusers' element={<AllUsers></AllUsers>}></Route>
+          <Route path='allusers' element={<RequireAdmin><AllUsers></AllUsers></RequireAdmin>}></Route>
         </Route>
         <Route path='/purchase/:toolID' element={<RequiredAuth><Purchase></Purchase></RequiredAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
