@@ -23,6 +23,7 @@ import DashboardItem from './Hooks/Dashboard/DashboardItem';
 import ManageAllOrders from './Hooks/Dashboard/ManageAllOrders';
 import MyOreders from './Hooks/Dashboard/MyOreders';
 import MyProfile from './Hooks/Dashboard/MyProfile';
+import Payement from './Hooks/Dashboard/Payement';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />}>
           <Route index element={<DashboardItem></DashboardItem>}></Route>
           <Route path='myorders' element={<MyOreders></MyOreders>}></Route>
+          <Route path='payment/:id' element={<Payement></Payement>}></Route>
           <Route path='allitem' element={<RequireAdmin><AllItems></AllItems></RequireAdmin>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
           <Route path='addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>

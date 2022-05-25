@@ -15,7 +15,7 @@ const Purchase = () => {
             .then(res => res.json())
             .then(data => setToolDetail(data))
     }, [])
-    const { _id, name } = toolDetail;
+    const { _id, name, price } = toolDetail;
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -31,6 +31,7 @@ const Purchase = () => {
             tool: name,
             phone: phone,
             address: address,
+            price: price,
             quantity: newQuantity,
             customer: user.email,
             customerName: user.displayName,
