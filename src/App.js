@@ -37,7 +37,7 @@ function App() {
         <Route path='/review' element={<Reviews></Reviews>}></Route>
         <Route path='/blog' element={<Blogs></Blogs>}></Route>
         <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
-        <Route path='/dashboard' element={<Dashboard />}>
+        <Route path='/dashboard' element={<RequiredAuth><Dashboard /></RequiredAuth>}>
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='myorders' element={<MyOreders></MyOreders>}></Route>
           <Route path='payment/:id' element={<Payement></Payement>}></Route>
