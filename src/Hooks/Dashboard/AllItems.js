@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useTools from '../useTools';
+import AllitemsDeleteModal from './AllitemsDeleteModal';
 
 const AllItems = () => {
     const [tools, setTools] = useTools();
+    const [allItemsdeletingItem, setAllitemsDeletingItem] = useState(null)
+
     return (
         <div>
             <div class="overflow-x-auto">
@@ -25,6 +28,8 @@ const AllItems = () => {
                                 <td>{tool.quantity}</td>
                                 <td>{tool.price}</td>
                                 <td>{tool.description}</td>
+                                <td><label onClick={() => setAllitemsDeletingItem(tool)} for="allitemsDeletemodal" class="btn modal-button">Delete</label></td>
+
                             </tr>)
                         }
 
@@ -32,6 +37,14 @@ const AllItems = () => {
                     </tbody>
                 </table>
             </div>
+            {
+                allItemsdeletingItem && <AllitemsDeleteModal
+                    allItemsdeletingItem={allItemsdeletingItem}
+                    setAllitemsDeletingItem={setAllitemsDeletingItem}
+                    tools={tools}
+                    setTools={setTools}
+                ></AllitemsDeleteModal>
+            }
         </div>
     );
 };

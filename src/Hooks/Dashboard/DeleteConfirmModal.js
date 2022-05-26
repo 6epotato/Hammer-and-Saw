@@ -23,7 +23,7 @@ const DeleteConfirmModal = ({ deletingItem, orders, setOrders, setDeletingItem }
             <div class="modal">
                 <div class="modal-box">
                     <h3 class="font-bold text-lg">Are You Sure You want to delete {tool}</h3>
-                    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                    <p class="py-4"></p>
                     <div class="modal-action">
                         <button onClick={() => handleDelete(_id)} class="btn">Delete</button>
                         <label for="my-modal" class="btn btn-tiny">Cancel</label>
