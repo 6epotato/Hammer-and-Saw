@@ -20,7 +20,7 @@ const Tool = ({ tool, setPurchase }) => {
                     <p><small>Available Quantity: {quantity}</small></p>
                     <p><small>Description:{description}</small></p>
                     <div class="card-actions">
-                        <button onClick={() => navigateToPurchase(_id)} class="btn btn-primary">Buy Now</button>
+                        <button onClick={() => navigateToPurchase(_id)} class="btn">Buy Now</button>
                     </div>
                 </div>
             </div>

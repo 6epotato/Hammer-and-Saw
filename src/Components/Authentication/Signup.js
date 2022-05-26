@@ -6,6 +6,7 @@ import signup from '../../Assets/Authentication/signup.jpg'
 import auth from '../../firebase.init';
 import useToken from '../../Hooks/useToken';
 import Loading from '../Shared/Loading';
+import google from '../../Assets/buttonIcons/google.png'
 
 const Signup = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -125,7 +126,9 @@ const Signup = () => {
                         </form>
                         <p><small>Already have an account? <Link to="/login" className='text-primary'>Log In to procced</Link></small></p>
                         <div className="divider">OR</div>
-                        <button onClick={() => signInWithGoogle()} className="btn btn-outline">Continue with Google</button>
+                        <button onClick={() => signInWithGoogle()} className="btn btn-outline">
+                            <img src={google} alt="" />
+                            <span className='ml-2'> Continue with Google</span></button>
                     </div>
                 </div>
             </div>

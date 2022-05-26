@@ -22,7 +22,7 @@ const MyProfile = () => {
             customerName: user.displayName,
         }
 
-        fetch('http://localhost:5000/profile', {
+        fetch('https://mighty-journey-66234.herokuapp.com/profile', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -40,8 +40,8 @@ const MyProfile = () => {
             <div class="hero min-h-screen bg-base-200">
                 <div class="hero-content text-center">
                     <div class="max-w-md">
-                        <h1 class="text-5xl font-bold">Name: {user.displayName}</h1>
-                        <h1 class="text-2xl font-bold">Email: {user.email}</h1>
+                        <h1 class="text-2xl font-bold">Name: {user.displayName}</h1>
+                        <h1 class="text-xl font-bold">Email: {user.email}</h1>
                         <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-1'>
                             <label className="label">
                                 <span className="label-text">Phone</span>
@@ -63,7 +63,7 @@ const MyProfile = () => {
 
                             </label>
                             <input type="text" name='linkedin' placeholder="Enter Your Linked In profile link" class="input input-bordered w-full max-w-xs" />
-                            <input type="submit" value={'submit'} class="btn btn-primary w-full max-w-xs" />
+                            <input type="submit" value={'submit'} class="btn w-full max-w-xs" />
                         </form>
                     </div>
                 </div>

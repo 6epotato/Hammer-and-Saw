@@ -3,6 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import hammerAndSaw from '../../Assets/buttonIcons/hammerAndSaw.png'
 
 const Navbar = () => {
 
@@ -43,7 +44,9 @@ const Navbar = () => {
                             {menuItem}
                         </ul>
                     </div>
-                    <a class="btn btn-ghost normal-case text-xl">Hammer and Saw</a>
+                    <a class="btn btn-ghost normal-case text-xl">
+                        <img src={hammerAndSaw} alt="" />
+                        <span className='ml-2'>Hammer and Saw</span></a>
                 </div>
                 <div class="navbar-end hidden lg:flex">
                     <ul class="menu menu-horizontal p-0">

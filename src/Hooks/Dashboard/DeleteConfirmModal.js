@@ -4,7 +4,7 @@ const DeleteConfirmModal = ({ deletingItem, orders, setOrders, setDeletingItem }
     const { _id, tool } = deletingItem;
     // delete orders
     const handleDelete = id => {
-        const url = `http://localhost:5000/purchase/${id}`;
+        const url = `https://mighty-journey-66234.herokuapp.com/purchase/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

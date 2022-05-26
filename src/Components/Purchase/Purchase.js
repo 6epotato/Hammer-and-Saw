@@ -10,7 +10,7 @@ const Purchase = () => {
     const [user, loading, error] = useAuthState(auth);
 
     useEffect(() => {
-        const url = `http://localhost:5000/tool/${toolID}`
+        const url = `https://mighty-journey-66234.herokuapp.com/tool/${toolID}`
         fetch(url)
             .then(res => res.json())
             .then(data => setToolDetail(data))
@@ -52,7 +52,7 @@ const Purchase = () => {
 
 
 
-        fetch('http://localhost:5000/purchase', {
+        fetch('https://mighty-journey-66234.herokuapp.com/purchase', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -114,7 +114,7 @@ const Purchase = () => {
 
                                             </label>
                                             <input type="number" name='newQuantity' placeholder="Enter quantity" class="input input-bordered w-full max-w-xs" />
-                                            <input type="submit" value={'submit'} class="btn btn-primary w-full max-w-xs" />
+                                            <input type="submit" value={'submit'} class="btn  w-full max-w-xs" />
                                         </form>
                                     </div>
                                 </div>

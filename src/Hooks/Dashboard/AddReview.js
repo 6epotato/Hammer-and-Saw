@@ -18,7 +18,7 @@ const AddReview = () => {
             customerName: user.displayName,
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://mighty-journey-66234.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -50,7 +50,7 @@ const AddReview = () => {
                         </label>
                         <textarea type="text" name='description' placeholder="Description" class="input input-bordered w-full max-w-xs" />
 
-                        <input type="submit" value={'submit'} class="btn btn-primary w-full max-w-xs"
+                        <input type="submit" value={'submit'} class="btn w-full max-w-xs"
                         />
                     </form>
                 </div>

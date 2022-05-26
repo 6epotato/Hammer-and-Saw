@@ -5,7 +5,7 @@ import DeleteConfirmationAllorders from '../Dashboard/DeleteConfirmationAllorder
 const ManageAllOrders = () => {
     const [allOrders, setAllOrders] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/purchase', {
+        fetch('https://mighty-journey-66234.herokuapp.com/purchase', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

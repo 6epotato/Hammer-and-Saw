@@ -14,7 +14,7 @@ const MyOreders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/purchase?customer=${user.email}`, {
+            fetch(`https://mighty-journey-66234.herokuapp.com/purchase?customer=${user.email}`, {
 
                 method: 'GET',
                 headers: {

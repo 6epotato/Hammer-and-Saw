@@ -6,6 +6,7 @@ import login from '../../Assets/Authentication/Login.jpg'
 import Loading from '../Shared/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useToken from '../../Hooks/useToken';
+import google from '../../Assets/buttonIcons/google.png'
 
 const Login = () => {
     const [signInWithGoogle, Guser, Gloading, Gerror] = useSignInWithGoogle(auth);
@@ -103,9 +104,11 @@ const Login = () => {
                             <input className='btn  w-full max-w-xs' type="submit" value={'LogIN'} />
                         </form>
                         {/* nevigate to register page */}
-                        <p><small>New to Doctors Portal? <Link to="/signup" className='text-primary'>Create New Account</Link></small></p>
+                        <p><small>New to Hammer And Saw? <Link to="/signup" className='text-primary'>Create New Account</Link></small></p>
                         <div className="divider">OR</div>
-                        <button onClick={() => signInWithGoogle()} className="btn btn-outline">Continue with Google</button>
+                        <button onClick={() => signInWithGoogle()} className="btn btn-outline">
+                            <img src={google} alt="" />
+                            <span className='ml-2'> Continue with Google</span></button>
                     </div>
                 </div>
             </div>

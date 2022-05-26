@@ -16,8 +16,8 @@ export default function App() {
     return (
         <>
             <AreaChart className="chart"
-                width={500}
-                height={400}
+                width={400}
+                height={300}
                 data={tools}
             // margin={{
             //     top: 10,

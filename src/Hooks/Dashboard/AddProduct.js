@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 
 const AddProduct = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const { data: tool, isLoading } = useQuery('services', () => fetch('http://localhost:5000/tool').then(res => res.json()))
+    const { data: tool, isLoading } = useQuery('services', () => fetch('https://mighty-journey-66234.herokuapp.com/tool').then(res => res.json()))
 
     const imageKey = '6fe6eceade1c589e0923d835ad57b39d';
     const onSubmit = async data => {
@@ -31,7 +31,7 @@ const AddProduct = () => {
                         img: img
                     }
                     // send to your database 
-                    fetch('http://localhost:5000/tool', {
+                    fetch('https://mighty-journey-66234.herokuapp.com/tool', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

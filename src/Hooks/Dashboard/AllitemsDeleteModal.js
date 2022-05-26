@@ -3,7 +3,7 @@ import React from 'react';
 const AllitemsDeleteModal = ({ allItemsdeletingItem, setAllitemsDeletingItem, tools, setTools }) => {
     const { _id, name } = allItemsdeletingItem;
     const handleDelete = id => {
-        const url = `http://localhost:5000/tool/${id}`;
+        const url = `https://mighty-journey-66234.herokuapp.com/tool/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
