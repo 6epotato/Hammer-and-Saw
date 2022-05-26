@@ -9,6 +9,7 @@ import RequiredAuth from './Components/Authentication/RequireAuth';
 import Signup from './Components/Authentication/Signup';
 import Blogs from './Components/Blog/Blogs';
 import Home from './Components/Home/Home';
+import Reviews from './Components/Home/Reviews';
 import MyPortfolio from './Components/MyPortfolio';
 import NotFound from './Components/NotFound';
 import Purchase from './Components/Purchase/Purchase';
@@ -33,10 +34,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/review' element={<Reviews></Reviews>}></Route>
         <Route path='/blog' element={<Blogs></Blogs>}></Route>
         <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/dashboard' element={<Dashboard />}>
-          <Route index element={<DashboardItem></DashboardItem>}></Route>
+          <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='myorders' element={<MyOreders></MyOreders>}></Route>
           <Route path='payment/:id' element={<Payement></Payement>}></Route>
           <Route path='allitem' element={<RequireAdmin><AllItems></AllItems></RequireAdmin>}></Route>

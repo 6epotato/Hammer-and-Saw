@@ -40,7 +40,7 @@ const MyPortfolio = () => {
                                 <a class="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium" href="https://tour-mania.web.app/">Project 2</a>
                             </div>
                             <div class="text-center my-3">
-                                <a class="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium" href="https://fluffy-madeleine-5a9581.netlify.app/">Project 1</a>
+                                <a class="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium" href="https://best-electronics-58258.web.app/">Project 3</a>
                             </div>
 
                         </div>
