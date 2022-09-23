@@ -11,6 +11,6 @@ https://hammer-and-saw.web.app/
 * all autherized section are protected with JWT 
 
 
-# admin id and password 
+### admin id and password 
 email: admin@gmail.com
 password: admin123
