@@ -44,9 +44,9 @@ const Navbar = () => {
                             {menuItem}
                         </ul>
                     </div>
-                    <a class="btn btn-ghost normal-case text-xl">
+                    <Link to={"/home"} class="btn btn-ghost normal-case text-xl">
                         <img src={hammerAndSaw} alt="" />
-                        <span className='ml-2'>Hammer and Saw</span></a>
+                        <span className='ml-2'>Hammer and Saw</span></Link>
                 </div>
                 <div class="navbar-end hidden lg:flex">
                     <ul class="menu menu-horizontal p-0">

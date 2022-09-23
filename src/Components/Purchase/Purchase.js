@@ -114,7 +114,7 @@ const Purchase = () => {
 
                                             </label>
                                             <input type="number" name='newQuantity' placeholder="Enter quantity" class="input input-bordered w-full max-w-xs" />
-                                            <input type="submit" value={'submit'} class="btn  w-full max-w-xs" />
+                                            <input type="submit" value={'submit'} class="btn  w-full max-w-xs my-5" />
                                         </form>
                                     </div>
                                 </div>

@@ -9,3 +9,8 @@ https://hammer-and-saw.web.app/
 * If admin wants then he can add or delete items
 * there is a review section for all users reviews are apeared in home page 
 * all autherized section are protected with JWT 
+
+
+# admin id and password 
+email: admin@gmail.com
+password: admin123

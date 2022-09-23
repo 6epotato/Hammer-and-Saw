@@ -63,7 +63,7 @@ const MyProfile = () => {
 
                             </label>
                             <input type="text" name='linkedin' placeholder="Enter Your Linked In profile link" class="input input-bordered w-full max-w-xs" />
-                            <input type="submit" value={'submit'} class="btn w-full max-w-xs" />
+                            <input type="submit" value={'submit'} class="btn w-full max-w-xs my-7" />
                         </form>
                     </div>
                 </div>

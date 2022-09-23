@@ -1,8 +1,7 @@
-
-import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
 import Login from './Components/Authentication/Login';
 import RequireAdmin from './Components/Authentication/RequireAdmin';
 import RequiredAuth from './Components/Authentication/RequireAuth';
@@ -13,25 +12,28 @@ import Reviews from './Components/Home/Reviews';
 import MyPortfolio from './Components/MyPortfolio';
 import NotFound from './Components/NotFound';
 import Purchase from './Components/Purchase/Purchase';
-import Footer from './Components/Shared/Footer';
-import Navbar from './Components/Shared/Navbar';
 import AddProduct from './Hooks/Dashboard/AddProduct';
 import AddReview from './Hooks/Dashboard/AddReview';
 import AllItems from './Hooks/Dashboard/AllItems';
 import AllUsers from './Hooks/Dashboard/AllUsers';
 import Dashboard from './Hooks/Dashboard/Dashboard';
-import DashboardItem from './Hooks/Dashboard/DashboardItem';
 import ManageAllOrders from './Hooks/Dashboard/ManageAllOrders';
 import MyOreders from './Hooks/Dashboard/MyOreders';
 import MyProfile from './Hooks/Dashboard/MyProfile';
 import Payement from './Hooks/Dashboard/Payement';
 
+import Footer from './Components/Shared/Footer';
+import Navbar from './Components/Shared/Navbar';
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <Routes>
+    
+        <Navbar></Navbar>
+        <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/review' element={<Reviews></Reviews>}></Route>
@@ -53,7 +55,8 @@ function App() {
         <Route path='/signup' element={<Signup />}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
-      <Footer></Footer>
+        <Footer></Footer>
+      
       <ToastContainer
         position="top-center"
         autoClose={5000}
