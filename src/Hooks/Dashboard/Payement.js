@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51L1nI2BXw0qb4AsJ7CqfrQ67sjE43rkQtiJGl
 
 const Payement = () => {
     const { id } = useParams();
-    const url = `https://mighty-journey-66234.herokuapp.com/purchase/${id}`;
+    const url = `https://hammer-and-saw-server.onrender.com/purchase/${id}`;
 
     const { data: purchase, isLoading } = useQuery(['purchase', id], () => fetch(url, {
         method: 'GET',

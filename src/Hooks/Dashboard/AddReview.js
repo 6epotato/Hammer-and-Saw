@@ -18,7 +18,7 @@ const AddReview = () => {
             customerName: user.displayName,
         }
 
-        fetch('https://mighty-journey-66234.herokuapp.com/review', {
+        fetch('https://hammer-and-saw-server.onrender.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

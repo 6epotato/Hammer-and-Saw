@@ -10,7 +10,7 @@ const Purchase = () => {
     const [user, loading, error] = useAuthState(auth);
 
     useEffect(() => {
-        const url = `https://mighty-journey-66234.herokuapp.com/tool/${toolID}`
+        const url = `https://hammer-and-saw-server.onrender.com/tool/${toolID}`
         fetch(url)
             .then(res => res.json())
             .then(data => setToolDetail(data))
@@ -52,7 +52,7 @@ const Purchase = () => {
 
 
 
-        fetch('https://mighty-journey-66234.herokuapp.com/purchase', {
+        fetch('https://hammer-and-saw-server.onrender.com/purchase', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

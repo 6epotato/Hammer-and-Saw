@@ -6,7 +6,7 @@ const useToken = user => {
         const email = user?.user?.email;
         const currentUser = { email: email };
         if (email) {
-            fetch(`https://mighty-journey-66234.herokuapp.com/user/${email}`, {
+            fetch(`https://hammer-and-saw-server.onrender.com/user/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

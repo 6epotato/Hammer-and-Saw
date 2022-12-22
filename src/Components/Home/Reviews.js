@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import ReviewCard from './ReviewCard';
 
 const Reviews = () => {
-    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://mighty-journey-66234.herokuapp.com/review'
+    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://hammer-and-saw-server.onrender.com/review'
     ).then(res => res.json()));
 
     if (isLoading) {

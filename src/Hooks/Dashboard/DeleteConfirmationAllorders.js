@@ -4,7 +4,7 @@ const DeleteConfirmationAllorders = ({ deletingItem, allOrders, setAllOrders, se
     const { _id, tool } = deletingItem;
     // delete orders
     const handleDelete = id => {
-        const url = `https://mighty-journey-66234.herokuapp.com/purchase/${id}`;
+        const url = `https://hammer-and-saw-server.onrender.com/purchase/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

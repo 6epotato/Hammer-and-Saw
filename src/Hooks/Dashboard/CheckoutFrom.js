@@ -14,7 +14,7 @@ const CheckoutFrom = ({ purchase }) => {
     const { _id, price, customerName, customer } = purchase;
 
     useEffect(() => {
-        fetch('https://mighty-journey-66234.herokuapp.com/create-payment-intent', {
+        fetch('https://hammer-and-saw-server.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -81,7 +81,7 @@ const CheckoutFrom = ({ purchase }) => {
                 purchaseId: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://mighty-journey-66234.herokuapp.com/purchase/${_id}`, {
+            fetch(`https://hammer-and-saw-server.onrender.com/purchase/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
