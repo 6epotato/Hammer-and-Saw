@@ -43,7 +43,7 @@ const Loading = () => {
       stroke-linejoin="round"
       stroke-width="24"></line>
   </svg>
-  <span class="text-xs font-medium text-gray-500">Loading...</span>
+  <span class="text-xs font-medium text-gray-500">Loading data. Please refresh...</span>
 </div>
             </div>
         </div>
