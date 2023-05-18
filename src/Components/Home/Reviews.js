@@ -5,7 +5,7 @@ import ReviewCard from './ReviewCard';
 
 const Reviews = () => {
     const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://hammer-and-saw-server.onrender.com/review'
-    ).then(res => res.json()));
+    ).then(res => res.json())); //https://hammer-and-saw-server.onrender.com
 
     if (isLoading) {
         return <Loading></Loading>
