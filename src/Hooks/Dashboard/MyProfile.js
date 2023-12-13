@@ -22,7 +22,7 @@ const MyProfile = () => {
             customerName: user.displayName,
         }
 
-        fetch('https://hammer-and-saw-server.onrender.com/profile', {
+        fetch('https://hammer-and-saw-server.vercel.app/profile', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -5,7 +5,7 @@ import DeleteConfirmationAllorders from '../Dashboard/DeleteConfirmationAllorder
 const ManageAllOrders = () => {
     const [allOrders, setAllOrders] = useState([])
     useEffect(() => {
-        fetch('https://hammer-and-saw-server.onrender.com/purchase', {
+        fetch('https://hammer-and-saw-server.vercel.app/purchase', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

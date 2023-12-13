@@ -11,11 +11,11 @@ const Tools = () => {
     const reversed = tools.slice(0).reverse();
    
     
-    // const slicedTools = reverse.slice(0, 6);
+    // const slicedTools = reverse.slice(0, 6); 
     return (
         <div>
             <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-6'>
-               { reversed.length===0? <Loading></Loading>:
+               { reversed.length===0? <div className='col-span-3'><Loading></Loading></div>:
                     reversed.slice(0, 6).map(tool => <Tool
                         key={tool._id}
                         tool={tool}

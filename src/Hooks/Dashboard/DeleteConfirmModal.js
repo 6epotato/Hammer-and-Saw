@@ -4,7 +4,7 @@ const DeleteConfirmModal = ({ deletingItem, orders, setOrders, setDeletingItem }
     const { _id, tool } = deletingItem;
     // delete orders
     const handleDelete = id => {
-        const url = `https://hammer-and-saw-server.onrender.com/purchase/${id}`;
+        const url = `https://hammer-and-saw-server.vercel.app/purchase/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

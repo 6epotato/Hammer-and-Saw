@@ -14,7 +14,7 @@ const MyOreders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://hammer-and-saw-server.onrender.com/purchase?customer=${user.email}`, {
+            fetch(`https://hammer-and-saw-server.vercel.app/purchase?customer=${user.email}`, {
 
                 method: 'GET',
                 headers: {

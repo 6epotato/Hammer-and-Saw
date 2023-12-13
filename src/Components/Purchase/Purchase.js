@@ -10,7 +10,7 @@ const Purchase = () => {
     const [user, loading, error] = useAuthState(auth);
 
     useEffect(() => {
-        const url = `https://hammer-and-saw-server.onrender.com/tool/${toolID}`
+        const url = `https://hammer-and-saw-server.vercel.app/tool/${toolID}`
         fetch(url)
             .then(res => res.json())
             .then(data => setToolDetail(data))
@@ -52,7 +52,7 @@ const Purchase = () => {
 
 
 
-        fetch('https://hammer-and-saw-server.onrender.com/purchase', {
+        fetch('https://hammer-and-saw-server.vercel.app/purchase', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

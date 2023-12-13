@@ -5,7 +5,7 @@ import Loading from '../Components/Shared/Loading';
 const useTools = () => {
     const [tools, setTools] = useState([]);
     useEffect(() => {
-        fetch('https://hammer-and-saw-server.onrender.com/tool')
+        fetch('https://hammer-and-saw-server.vercel.app/tool')
             .then(res => res.json())
             .then(data => setTools(data))
     }, [])

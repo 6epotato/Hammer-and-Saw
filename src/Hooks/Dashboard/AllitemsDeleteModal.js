@@ -3,7 +3,7 @@ import React from 'react';
 const AllitemsDeleteModal = ({ allItemsdeletingItem, setAllitemsDeletingItem, tools, setTools }) => {
     const { _id, name } = allItemsdeletingItem;
     const handleDelete = id => {
-        const url = `https://hammer-and-saw-server.onrender.com/tool/${id}`;
+        const url = `https://hammer-and-saw-server.vercel.app/tool/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

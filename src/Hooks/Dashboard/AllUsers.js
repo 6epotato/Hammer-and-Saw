@@ -5,7 +5,7 @@ import UserRow from './UserRow';
 
 const AllUsers = () => {
 
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://hammer-and-saw-server.onrender.com/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://hammer-and-saw-server.vercel.app/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 
 const AddProduct = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const { data: tool, isLoading } = useQuery('services', () => fetch('https://hammer-and-saw-server.onrender.com/tool').then(res => res.json()))
+    const { data: tool, isLoading } = useQuery('services', () => fetch('https://hammer-and-saw-server.vercel.app/tool').then(res => res.json()))
 
     const imageKey = '6fe6eceade1c589e0923d835ad57b39d';
     const onSubmit = async data => {
@@ -31,7 +31,7 @@ const AddProduct = () => {
                         img: img
                     }
                     // send to your database 
-                    fetch('https://hammer-and-saw-server.onrender.com/tool', {
+                    fetch('https://hammer-and-saw-server.vercel.app/tool', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

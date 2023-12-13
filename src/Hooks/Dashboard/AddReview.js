@@ -18,7 +18,7 @@ const AddReview = () => {
             customerName: user.displayName,
         }
 
-        fetch('https://hammer-and-saw-server.onrender.com/review', {
+        fetch('https://hammer-and-saw-server.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
